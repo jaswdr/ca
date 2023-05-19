@@ -1,0 +1,17 @@
+[ req ]
+default_md = sha512
+prompt = no
+req_extensions = req_ext
+distinguished_name = req_distinguished_name
+[ req_distinguished_name ]
+commonName = server.localhost
+countryName = IE
+stateOrProvinceName = Leinster
+localityName = Dublin
+[ req_ext ]
+keyUsage=critical,digitalSignature,keyEncipherment
+extendedKeyUsage=serverAuth,clientAuth
+basicConstraints=critical,CA:false
+subjectAltName = @alt_names
+[ alt_names ]
+DNS.0 = server.localhost
